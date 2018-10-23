@@ -10,61 +10,62 @@ package boletin_3;
  * @author Samuel
  */
 public class Propiedades {
-    private float km;
-    private float lt;
-    private float vMed;
-    private float pGas;
+
+    private float kilometros;
+    private float litros;
+    private float velocidadeMedia;
+    private float precioGasolina;
     private float tiempo;
-    
-public Propiedades(){}
 
-public Propiedades (float a,float b,float c,float d, float e,float f){
-lt=a;
-pGas=b;
-vMed=c;
-pGas=d;
-tiempo=e;
-km=f;
-}
+    public Propiedades() {
+    }
 
+    public Propiedades(float a, float b, float c, float d, float e, float f) {
+        litros = a;
+        precioGasolina = b;
+        velocidadeMedia = c;
+        precioGasolina = d;
+        tiempo = e;
+        kilometros = f;
+    }
 
-public  float getTempo(){
-float tempo= (km/vMed); //se le pone otro nombre que no sea el de arriba y con el return es como si se lo diesemos
-return tempo;
+    public float getTempo() {
+        float tempo = (kilometros / velocidadeMedia); //se le pone otro nombre que no sea el de arriba y con el return es como si se lo diesemos
+        return tempo;
 
-}
+    }
 
- public float consumoMedio(){
-    return  ((this.lt/this.pGas)*100); //se puede hacer asi para simplificar
-}
- 
- 
-public float consumoEuros(){
-float euros= (pGas*km/100);
+    public float consumoMedio() {
+        return ((this.litros / this.precioGasolina) * 100); //se puede hacer asi para simplificar
+    }
 
-return euros;
-}
-        
-public void setKms (float km){ // en los set hay que darles el valor
-}
-public void setLitros(float lt){
-this.lt=lt;
-}
-public float getLitros(){ //A los get no se le ponen parametros en los parentesis
-return lt;
-}
+    public float consumoEuros() {
+        float euros = (precioGasolina * kilometros / 100);
 
-public void setvMed(float vMed){
-    this.vMed=vMed;
-}
+        return euros;
+    }
 
-public float getvMed(){
-return km/tiempo;
-}
+    public void setKilometros(float km) { // en los set hay que darles el valor
+    }
 
-public void setGas(float pGas){
-this.pGas=pGas;
-}
+    public void setLitros(float lt) {
+        this.litros = lt;
+    }
 
+    public float getLitros() { //A los get no se le ponen parametros en los parentesis
+        return litros;
+    }
+
+    public void setVelocidadMedia(float vMed) {
+        this.velocidadeMedia = vMed;
+    }
+
+    public float getVelocidadMedia() {
+        return kilometros / tiempo;
+    }
+
+    public void setGas(float pGas) {
+        this.precioGasolina = pGas;
+    }
 
 }
